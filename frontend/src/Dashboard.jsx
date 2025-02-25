@@ -21,7 +21,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchPlayers();
-  }, [selectedPlayer]);
+  }, []);
 
   const addPlayer = async (newPlayer) => {
     try {
