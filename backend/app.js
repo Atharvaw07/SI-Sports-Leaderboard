@@ -50,26 +50,6 @@ app.put("/players/:id", (req, res) => {
   res.json(data2);
 });
 
-// app.put("/players/:id", (req, res) => {
-//   console.log("Incoming PUT request for ID:", req.params.id);
-//   console.log("Received body:", req.body);
-
-//   const id = parseInt(req.params.id);
-//   console.log("Updating player with ID:", id);
-
-//   if (!data2 || data2.length === 0) {
-//     return res.status(500).json({ error: "Data not loaded yet" });
-//   }
-
-//   const index = data2.findIndex((p) => Number(p.id) === id);
-//   if (index < 0) return res.status(404).json({ error: "Player not found" });
-
-  
-//   data2[index] = { ...data2[index], ...req.body };
-//   console.log("Updated player:", data2[index]);
-
-//   res.json(data2);
-// });
 
 app.delete("/players/:id", (req, res) => {
   const id = parseInt(req.params.id);
